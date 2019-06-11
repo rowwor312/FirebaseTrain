@@ -1,0 +1,83 @@
+html, body {
+    background-color: black;
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 400px auto auto;
+    grid-gap: 1px;
+  }
+  
+  .container {
+    background-color: blue;
+    color: red;
+    }
+  
+ .card-header{
+      color: blue;
+      font-weight: bold;
+      font-size: 1vw;
+  }
+ 
+  
+  .form-group {
+    margin: 3px;
+  }
+   
+  
+  /* #title {
+    background-image: url("assets/images/trainimg3");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 3vw;
+  } */
+  
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    font-size: 2vw;
+    align-items: center;
+    color: blue;
+    font-weight: bolder;
+}
+
+  #currentTrainSchedule {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1vw;
+  }
+  
+  #addTrain {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+    font-size: 1vw;
+  }
+
+/* .container>div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  } */
+   /* .container>div:nth-child(1n) {
+    background-color: white;
+    color: black;
+  }
+  
+  .container>div:nth-child(2n) {
+    background-color: white;
+    color: black;
+  }
+  
+  .container>div:nth-child(3n) {
+    background-color: white;
+    color: black;
+  } */
