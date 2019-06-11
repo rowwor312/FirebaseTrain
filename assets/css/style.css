@@ -27,15 +27,7 @@ html, body {
     margin: 3px;
   }
    
-  
-  /* #title {
-    background-image: url("assets/images/trainimg3");
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-transform: uppercase;
-    font-size: 3vw;
-  } */
-  
+ 
 .jumbotron {
     display: flex;
     flex-direction: column;
@@ -62,22 +54,3 @@ html, body {
     font-size: 1vw;
   }
 
-/* .container>div {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  } */
-   /* .container>div:nth-child(1n) {
-    background-color: white;
-    color: black;
-  }
-  
-  .container>div:nth-child(2n) {
-    background-color: white;
-    color: black;
-  }
-  
-  .container>div:nth-child(3n) {
-    background-color: white;
-    color: black;
-  } */

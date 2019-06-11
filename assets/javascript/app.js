@@ -1,16 +1,17 @@
 //Variables - Set to Empty
+var minsAway = "";
+var nextArrival = "";
 var trainName = "";
 var trainDestination = "";
-var trainTime = "";
 var trainFrequency = "";
-var nextArrival = "";
-var minutesAway = "";
+var trainTime = "";
+
 
 
 // Variables - Input Data
 var Train = $("#train-name");
 var TrainDestination = $("#train-destination");
-// Validation for Time with jQuery Mask
+// Validate Time - Mask
 var TrainTime = $("#train-time").mask("00:00");
 var TimeFreq = $("#time-freq").mask("0000");
 
@@ -32,8 +33,8 @@ database.ref("/trains").on("child_added", function(snapshot) {
 
   //  Local Variables - Firebase Data
   var trainDiff = 0;
-  var trainRemainder = 0;
-  var minutesTillArrival = "";
+  var trainRemain = 0;
+  var minsTillArrive = "";
   var nextTrainTime = "";
   var frequency = snapshot.val().frequency;
 
@@ -41,18 +42,18 @@ database.ref("/trains").on("child_added", function(snapshot) {
   trainDiff = moment().diff(moment.unix(snapshot.val().time), "minutes");
 
   // Calculate Time Remainder - Frequency, Time Difference
-  trainRemainder = trainDiff % frequency;
-  minutesTillArrival = frequency - trainRemainder;
-  nextTrainTime = moment().add(minutesTillArrival, "m").format("hh:mm A");
+  trainRemain = trainDiff % frequency;
+  minsTillArrive = frequency - trainRemain;
+  nextTrainTime = moment().add(minsTillArrive, "m").format("hh:mm A");
 
   // Append Train to New Row in Train Schedule
   $("#table-data").append(
     "<tr><td>" + snapshot.val().name + "</td>" +
     "<td>" + snapshot.val().destination + "</td>" +
     "<td>" + frequency + "</td>" +
-    "<td>" + minutesTillArrival + "</td>" +
-    "<td>" + nextTrainTime + "  " + "<a><span class='glyphicon glyphicon-remove icon-hidden' aria-hidden='true'></span></a>" + "</td></tr>"
-  );
+    "<td>" + minsTillArrive + "</td>" +
+    "<td>" + nextTrainTime + "  " + "<a><span class='btn btn-primary'</span></a>" + "</td></tr>"
+    );
 
   $("span").hide();
 
@@ -80,7 +81,7 @@ var storeInputs = function(event) {
     time: trainTime,
     frequency: trainFrequency,
     nextArrival: nextArrival,
-    minutesAway: minutesAway,
+    minsAway: minsAway,
     date_added: firebase.database.ServerValue.TIMESTAMP
   });
 
@@ -102,7 +103,7 @@ $("#btn-add").on("click", function(event) {
 });
 
 // Calls storeInputs - Enter Key
-$('form').on("keypress", function(event) {
+$("form").on("keypress", function(event) {
   if (event.which === 13) {
     // Form Validation Alert - Missing Data
     if (Train.val().length === 0 || TrainDestination.val().length === 0 || TrainTime.val().length === 0 || TimeFreq === 0) {

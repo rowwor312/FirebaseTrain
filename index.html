@@ -4,24 +4,15 @@
 <head>
 	<title>Firebase Train</title>
 
-	<!-- personal css -->
-	<link type='text/css' rel='stylesheet' href='assets/css/style.css' />
-
-	<!--   firebase ref -->
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-
-	<!--   links Bootstrap as backup to Grid CSS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-	<!--   links Moment JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.js" charset="utf-8"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link type='text/css' rel='stylesheet' href='assets/css/style.css' />
 
 </head>
 
@@ -29,10 +20,7 @@
 
 	<div class="container">
         
-    	<!-- cell #1: title -->
-		<!-- <div id="title">Fast Train Express
-            </div> -->
-
+    	
             <div class="jumbotron">
                     <h1 class="display-4">Super Train Express</h1>
                     <p class="lead"></p>
@@ -40,9 +28,9 @@
                     </div>
 
             
-		<!--  cell #2 current schedule -->
+		<!-- Train Schedule -->
 		<div id="currentTrainSchedule">
-            <!-- Current Train Schedule -->
+        
             
        <div class="card border-dark mb-3">
         <div class="card-header">Current Train Schedule</div>
@@ -61,21 +49,18 @@
     </div>
 
 
-			<!-- <hr /> -->
-			<!-- end Train Schedule cell -->
+			
 		</div>
 
-		<!-- cell #3: add train(s) -->
+		
 		<div id="addTrain">
 
         <div class="card border-dark mb-3">
             <div class="card-header">Add Train</div>
                 <div class="card-body">   
-			<!-- <div class="panel panel-default"> -->
-				<!-- <div class="panel-heading panel-custom"> -->
-					<!-- addTrain -->
-				<!-- </div> -->
-				<!-- <div class="panel-body"> -->
+			
+					
+				<!-- Add Train Input-->
 					<form>
 						<div class="form-group">
 							<label for="trainName">Train Name:</label>
@@ -94,15 +79,15 @@
 							<input type="text" class="form-control" id="time-freq">
 						</div>
 						<div class="btn-group" role="group">
-							<button type="button" id="btn-add" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Submit</button>
+							<input class="btn btn-primary" type="submit" id="btn-add" value="Submit">
+													
 						</div>
 					</form>
 				</div>
-				<!-- end Add Train cell -->
 			</div>
 		</div>
 
-		<!-- custom javaScript -->
+		<!-- JS Link -->
 		<script type='text/javascript' src='assets/javascript/app.js'></script>
 
 
